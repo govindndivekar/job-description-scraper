@@ -1,0 +1,15 @@
+[Unit]
+Description=JDScraper local viewer (127.0.0.1:8765)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/dietpi/apps/job-description-scraper
+ExecStart=/home/dietpi/.local/bin/uv run jdscraper serve --host 127.0.0.1 --port 8765
+Restart=on-failure
+RestartSec=5
+# Do not publish this on :80 — WordPress already owns that, and the viewer has no login.
+
+[Install]
+WantedBy=multi-user.target

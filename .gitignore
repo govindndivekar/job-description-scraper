@@ -9,6 +9,8 @@ dist/
 build/
 data/*.sqlite
 data/*.sqlite-journal
+data/logs/
+data/cron_inspect_state.json
 output/
 .python-version
 temp/

@@ -116,6 +116,10 @@ Three script-only jobs (no LLM) run on this machine:
 
 They are staggered on purpose. There is no combined `run` cron.
 
+See [DEPLOY-DIETPI.md](DEPLOY-DIETPI.md) to run this on a Raspberry Pi
+with **system cron** (no Hermes). On this laptop the same three jobs
+are Hermes script-only crons.
+
 ```bash
 hermes cron list
 hermes cron run d5e5680b691a    # fire resolve now
