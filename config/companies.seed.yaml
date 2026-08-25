@@ -1,0 +1,719 @@
+# Curated Bangalore employers. ATS fields are only set when the public
+# board token is known. resolve/crawl fill the rest over time.
+companies:
+  # --- Product / SaaS with public ATS ---
+  - name: Atlassian
+    website: https://www.atlassian.com
+    career_url: https://www.atlassian.com/company/careers
+    domain: saas
+  - name: Databricks
+    website: https://www.databricks.com
+    career_url: https://www.databricks.com/company/careers
+    ats_kind: greenhouse
+    ats_slug: databricks
+    domain: saas
+  - name: Cloudflare
+    website: https://www.cloudflare.com
+    career_url: https://www.cloudflare.com/careers
+    ats_kind: greenhouse
+    ats_slug: cloudflare
+    domain: saas
+  - name: Elastic
+    website: https://www.elastic.co
+    career_url: https://www.elastic.co/careers
+    ats_kind: greenhouse
+    ats_slug: elastic
+    domain: saas
+  - name: MongoDB
+    website: https://www.mongodb.com
+    career_url: https://www.mongodb.com/careers
+    ats_kind: greenhouse
+    ats_slug: mongodb
+    domain: saas
+  - name: Datadog
+    website: https://www.datadoghq.com
+    career_url: https://careers.datadoghq.com
+    ats_kind: greenhouse
+    ats_slug: datadog
+    domain: saas
+  - name: Stripe
+    website: https://stripe.com
+    career_url: https://stripe.com/jobs
+    ats_kind: greenhouse
+    ats_slug: stripe
+    domain: fintech
+  - name: Twilio
+    website: https://www.twilio.com
+    career_url: https://www.twilio.com/en-us/company/jobs
+    ats_kind: greenhouse
+    ats_slug: twilio
+    domain: saas
+  - name: GitLab
+    website: https://about.gitlab.com
+    career_url: https://about.gitlab.com/jobs
+    ats_kind: greenhouse
+    ats_slug: gitlab
+    domain: saas
+  - name: HashiCorp
+    website: https://www.hashicorp.com
+    career_url: https://www.hashicorp.com/careers
+    domain: saas
+  - name: Grammarly
+    website: https://www.grammarly.com
+    career_url: https://www.grammarly.com/jobs
+    domain: saas
+  - name: Canva
+    website: https://www.canva.com
+    career_url: https://www.canva.com/careers
+    domain: saas
+  - name: Notion
+    website: https://www.notion.so
+    career_url: https://www.notion.so/careers
+    domain: saas
+  - name: Figma
+    website: https://www.figma.com
+    career_url: https://www.figma.com/careers
+    ats_kind: greenhouse
+    ats_slug: figma
+    domain: saas
+  - name: Okta
+    website: https://www.okta.com
+    career_url: https://www.okta.com/company/careers
+    ats_kind: greenhouse
+    ats_slug: okta
+    domain: saas
+  - name: Skillz
+    website: https://www.skillz.com
+    career_url: https://job-boards.greenhouse.io/skillzinc
+    ats_kind: greenhouse
+    ats_slug: skillzinc
+    domain: consumer
+  - name: Postman
+    website: https://www.postman.com
+    career_url: https://www.postman.com/company/careers
+    ats_kind: greenhouse
+    ats_slug: postman
+    domain: saas
+  - name: BrowserStack
+    website: https://www.browserstack.com
+    career_url: https://www.browserstack.com/careers
+    domain: saas
+  - name: Freshworks
+    website: https://www.freshworks.com
+    career_url: https://www.freshworks.com/company/careers
+    domain: saas
+  - name: Chargebee
+    website: https://www.chargebee.com
+    career_url: https://www.chargebee.com/careers
+    domain: saas
+  - name: Whatfix
+    website: https://whatfix.com
+    career_url: https://whatfix.com/careers
+    domain: saas
+  - name: CleverTap
+    website: https://clevertap.com
+    career_url: https://clevertap.com/careers
+    domain: saas
+  - name: Darwinbox
+    website: https://darwinbox.com
+    career_url: https://darwinbox.com/careers
+    domain: saas
+  - name: Druva
+    website: https://www.druva.com
+    career_url: https://www.druva.com/careers
+    domain: saas
+  - name: Icertis
+    website: https://www.icertis.com
+    career_url: https://www.icertis.com/careers
+    domain: saas
+  - name: Hasura
+    website: https://hasura.io
+    career_url: https://hasura.io/careers
+    domain: saas
+  - name: Zoho
+    website: https://www.zoho.com
+    career_url: https://careers.zohocorp.com
+    domain: saas
+
+  # --- India consumer / fintech / ecommerce ---
+  - name: Flipkart
+    website: https://www.flipkart.com
+    career_url: https://www.flipkartcareers.com
+    domain: ecommerce
+  - name: PhonePe
+    website: https://www.phonepe.com
+    career_url: https://www.phonepe.com/careers
+    domain: fintech
+  - name: Swiggy
+    website: https://www.swiggy.com
+    career_url: https://careers.swiggy.com
+    domain: ecommerce
+  - name: Razorpay
+    website: https://razorpay.com
+    career_url: https://razorpay.com/jobs
+    domain: fintech
+  - name: CRED
+    website: https://cred.club
+    career_url: https://careers.cred.club
+    domain: fintech
+  - name: Groww
+    website: https://groww.in
+    career_url: https://groww.in/careers
+    domain: fintech
+  - name: Zerodha
+    website: https://zerodha.com
+    career_url: https://careers.zerodha.com
+    domain: fintech
+  - name: Meesho
+    website: https://www.meesho.com
+    career_url: https://careers.meesho.com
+    domain: ecommerce
+  - name: ShareChat
+    website: https://sharechat.com
+    career_url: https://careers.sharechat.com
+    domain: consumer
+  - name: Dream11
+    website: https://www.dream11.com
+    career_url: https://www.dream11.com/careers
+    domain: consumer
+  - name: Zomato
+    website: https://www.zomato.com
+    career_url: https://www.zomato.com/careers
+    domain: ecommerce
+  - name: Paytm
+    website: https://paytm.com
+    career_url: https://jobs.paytm.com
+    domain: fintech
+  - name: Ather Energy
+    website: https://www.atherenergy.com
+    career_url: https://www.atherenergy.com/careers
+    domain: automotive
+  - name: Ola
+    website: https://www.olacabs.com
+    career_url: https://www.olacabs.com/careers
+    domain: consumer
+  - name: Ola Electric
+    website: https://www.olaelectric.com
+    career_url: https://www.olaelectric.com/careers
+    domain: automotive
+  - name: Udaan
+    website: https://udaan.com
+    career_url: https://udaan.com/careers
+    domain: ecommerce
+  - name: Ninjacart
+    website: https://ninjacart.in
+    career_url: https://ninjacart.in/careers
+    domain: ecommerce
+  - name: Practo
+    website: https://www.practo.com
+    career_url: https://www.practo.com/company/careers
+    domain: healthcare
+  - name: Curefit
+    website: https://www.cult.fit
+    career_url: https://www.cult.fit/careers
+    domain: healthcare
+
+  # --- Global product with Bangalore offices ---
+  - name: Google
+    website: https://www.google.com
+    career_url: https://www.google.com/about/careers
+    domain: software
+  - name: Microsoft
+    website: https://www.microsoft.com
+    career_url: https://careers.microsoft.com
+    domain: software
+  - name: Amazon
+    website: https://www.amazon.jobs
+    career_url: https://www.amazon.jobs/en/locations/bangalore-india
+    domain: ecommerce
+  - name: Apple
+    website: https://www.apple.com
+    career_url: https://jobs.apple.com
+    domain: software
+  - name: Meta
+    website: https://www.metacareers.com
+    career_url: https://www.metacareers.com
+    domain: software
+  - name: Adobe
+    website: https://www.adobe.com
+    career_url: https://careers.adobe.com
+    domain: software
+  - name: Oracle
+    website: https://www.oracle.com
+    career_url: https://careers.oracle.com
+    domain: software
+  - name: SAP
+    website: https://www.sap.com
+    career_url: https://jobs.sap.com
+    domain: saas
+  - name: Salesforce
+    website: https://www.salesforce.com
+    career_url: https://careers.salesforce.com
+    domain: saas
+  - name: Cisco
+    website: https://www.cisco.com
+    career_url: https://jobs.cisco.com
+    domain: software
+  - name: VMware
+    website: https://www.vmware.com
+    career_url: https://careers.vmware.com
+    domain: software
+  - name: ServiceNow
+    website: https://www.servicenow.com
+    career_url: https://careers.servicenow.com
+    domain: saas
+  - name: Workday
+    website: https://www.workday.com
+    career_url: https://www.workday.com/en-us/company/careers.html
+    domain: saas
+  - name: Intuit
+    website: https://www.intuit.com
+    career_url: https://jobs.intuit.com
+    domain: fintech
+  - name: Autodesk
+    website: https://www.autodesk.com
+    career_url: https://www.autodesk.com/careers
+    domain: software
+  - name: LinkedIn
+    website: https://www.linkedin.com
+    career_url: https://careers.linkedin.com
+    domain: software
+  - name: Uber
+    website: https://www.uber.com
+    career_url: https://www.uber.com/careers
+    domain: consumer
+  - name: PayPal
+    website: https://www.paypal.com
+    career_url: https://careers.pypl.com
+    domain: fintech
+  - name: Walmart Global Tech
+    website: https://tech.walmart.com
+    career_url: https://careers.walmart.com
+    domain: ecommerce
+  - name: Target
+    website: https://corporate.target.com
+    career_url: https://corporate.target.com/careers
+    domain: ecommerce
+  - name: Goldman Sachs
+    website: https://www.goldmansachs.com
+    career_url: https://www.goldmansachs.com/careers
+    domain: fintech
+  - name: JPMorgan Chase
+    website: https://www.jpmorganchase.com
+    career_url: https://careers.jpmorgan.com
+    domain: fintech
+  - name: Morgan Stanley
+    website: https://www.morganstanley.com
+    career_url: https://www.morganstanley.com/careers
+    domain: fintech
+  - name: Wells Fargo
+    website: https://www.wellsfargo.com
+    career_url: https://www.wellsfargojobs.com
+    domain: fintech
+  - name: ANZ
+    website: https://www.anz.com
+    career_url: https://www.anz.com/careers
+    domain: fintech
+  - name: Standard Chartered
+    website: https://www.sc.com
+    career_url: https://www.sc.com/en/careers
+    domain: fintech
+  - name: Deutsche Bank
+    website: https://www.db.com
+    career_url: https://careers.db.com
+    domain: fintech
+
+  # --- IT services ---
+  - name: Infosys
+    website: https://www.infosys.com
+    career_url: https://www.infosys.com/careers
+    domain: it_services
+  - name: Wipro
+    website: https://www.wipro.com
+    career_url: https://careers.wipro.com
+    domain: it_services
+  - name: TCS
+    website: https://www.tcs.com
+    career_url: https://www.tcs.com/careers
+    domain: it_services
+  - name: HCLTech
+    website: https://www.hcltech.com
+    career_url: https://www.hcltech.com/careers
+    domain: it_services
+  - name: Tech Mahindra
+    website: https://www.techmahindra.com
+    career_url: https://careers.techmahindra.com
+    domain: it_services
+  - name: LTIMindtree
+    website: https://www.ltimindtree.com
+    career_url: https://www.ltimindtree.com/careers
+    domain: it_services
+  - name: Mphasis
+    website: https://www.mphasis.com
+    career_url: https://careers.mphasis.com
+    domain: it_services
+  - name: Coforge
+    website: https://www.coforge.com
+    career_url: https://www.coforge.com/careers
+    domain: it_services
+  - name: Happiest Minds
+    website: https://www.happiestminds.com
+    career_url: https://www.happiestminds.com/careers
+    domain: it_services
+  - name: Persistent Systems
+    website: https://www.persistent.com
+    career_url: https://www.persistent.com/careers
+    domain: it_services
+  - name: Sonata Software
+    website: https://www.sonata-software.com
+    career_url: https://www.sonata-software.com/careers
+    domain: it_services
+  - name: Accenture
+    website: https://www.accenture.com
+    career_url: https://www.accenture.com/in-en/careers
+    domain: it_services
+  - name: Capgemini
+    website: https://www.capgemini.com
+    career_url: https://www.capgemini.com/careers
+    domain: it_services
+  - name: Cognizant
+    website: https://www.cognizant.com
+    career_url: https://careers.cognizant.com
+    domain: it_services
+  - name: IBM
+    website: https://www.ibm.com
+    career_url: https://www.ibm.com/careers
+    domain: it_services
+  - name: DXC Technology
+    website: https://www.dxc.com
+    career_url: https://careers.dxc.com
+    domain: it_services
+  - name: NTT DATA
+    website: https://www.nttdata.com
+    career_url: https://careers.nttdata.com
+    domain: it_services
+  - name: EPAM
+    website: https://www.epam.com
+    career_url: https://www.epam.com/careers
+    domain: it_services
+  - name: Thoughtworks
+    website: https://www.thoughtworks.com
+    career_url: https://www.thoughtworks.com/careers
+    domain: it_services
+  - name: Publicis Sapient
+    website: https://www.publicissapient.com
+    career_url: https://www.publicissapient.com/careers
+    domain: it_services
+  - name: Deloitte
+    website: https://www.deloitte.com
+    career_url: https://www.deloitte.com/careers
+    domain: it_services
+  - name: PwC
+    website: https://www.pwc.com
+    career_url: https://www.pwc.com/careers
+    domain: it_services
+  - name: EY
+    website: https://www.ey.com
+    career_url: https://careers.ey.com
+    domain: it_services
+  - name: KPMG
+    website: https://kpmg.com
+    career_url: https://kpmg.com/careers
+    domain: it_services
+  - name: Quest Global
+    website: https://www.quest-global.com
+    career_url: https://www.quest-global.com/careers
+    domain: engineering_services
+
+  # --- Semiconductor / EDA ---
+  - name: Intel
+    website: https://www.intel.com
+    career_url: https://jobs.intel.com
+    domain: semiconductor
+  - name: AMD
+    website: https://www.amd.com
+    career_url: https://careers.amd.com
+    domain: semiconductor
+  - name: NVIDIA
+    website: https://www.nvidia.com
+    career_url: https://www.nvidia.com/en-us/about-nvidia/careers
+    domain: semiconductor
+  - name: Qualcomm
+    website: https://www.qualcomm.com
+    career_url: https://careers.qualcomm.com
+    domain: semiconductor
+  - name: Broadcom
+    website: https://www.broadcom.com
+    career_url: https://www.broadcom.com/company/careers
+    domain: semiconductor
+  - name: Texas Instruments
+    website: https://www.ti.com
+    career_url: https://careers.ti.com
+    domain: semiconductor
+  - name: Analog Devices
+    website: https://www.analog.com
+    career_url: https://www.analog.com/en/about-adi/careers.html
+    domain: semiconductor
+  - name: Microchip
+    website: https://www.microchip.com
+    career_url: https://careers.microchip.com
+    domain: semiconductor
+  - name: NXP
+    website: https://www.nxp.com
+    career_url: https://www.nxp.com/company/about-nxp/careers
+    domain: semiconductor
+  - name: Infineon
+    website: https://www.infineon.com
+    career_url: https://www.infineon.com/cms/en/careers
+    domain: semiconductor
+  - name: STMicroelectronics
+    website: https://www.st.com
+    career_url: https://www.st.com/content/st_com/en/about/careers.html
+    domain: semiconductor
+  - name: Samsung Semiconductor
+    website: https://semiconductor.samsung.com
+    career_url: https://www.samsungcareers.com
+    domain: semiconductor
+  - name: Arm
+    website: https://www.arm.com
+    career_url: https://careers.arm.com
+    domain: semiconductor
+  - name: MediaTek
+    website: https://www.mediatek.com
+    career_url: https://www.mediatek.com/careers
+    domain: semiconductor
+  - name: Marvell
+    website: https://www.marvell.com
+    career_url: https://www.marvell.com/company/careers.html
+    domain: semiconductor
+  - name: Synopsys
+    website: https://www.synopsys.com
+    career_url: https://www.synopsys.com/careers.html
+    domain: semiconductor
+  - name: Cadence
+    website: https://www.cadence.com
+    career_url: https://www.cadence.com/en_US/home/company/careers.html
+    domain: semiconductor
+  - name: Siemens EDA
+    website: https://eda.sw.siemens.com
+    career_url: https://jobs.siemens.com
+    domain: semiconductor
+  - name: Ansys
+    website: https://www.ansys.com
+    career_url: https://www.ansys.com/careers
+    domain: semiconductor
+  - name: Applied Materials
+    website: https://www.appliedmaterials.com
+    career_url: https://www.appliedmaterials.com/us/en/careers.html
+    domain: semiconductor
+  - name: Lam Research
+    website: https://www.lamresearch.com
+    career_url: https://careers.lamresearch.com
+    domain: semiconductor
+  - name: KLA
+    website: https://www.kla.com
+    career_url: https://www.kla.com/careers
+    domain: semiconductor
+  - name: Micron
+    website: https://www.micron.com
+    career_url: https://micron.wd1.myworkdayjobs.com/External
+    ats_kind: workday
+    ats_slug: micron
+    ats_site: External
+    domain: semiconductor
+  - name: Western Digital
+    website: https://www.westerndigital.com
+    career_url: https://jobs.westerndigital.com
+    domain: semiconductor
+  - name: Sandisk
+    website: https://www.sandisk.com
+    career_url: https://www.sandisk.com/company/careers
+    domain: semiconductor
+  - name: GlobalFoundries
+    website: https://gf.com
+    career_url: https://gf.com/careers
+    domain: semiconductor
+  - name: Renesas
+    website: https://www.renesas.com
+    career_url: https://www.renesas.com/us/en/about/careers
+    domain: semiconductor
+  - name: onsemi
+    website: https://www.onsemi.com
+    career_url: https://www.onsemi.com/careers
+    domain: semiconductor
+  - name: Tessolve
+    website: https://www.tessolve.com
+    career_url: https://www.tessolve.com/careers
+    domain: semiconductor
+  - name: Sankalp Semiconductor
+    website: https://www.sankalpsemi.com
+    career_url: https://www.sankalpsemi.com/careers
+    domain: semiconductor
+  - name: Open-Silicon
+    website: https://www.open-silicon.com
+    career_url: https://www.open-silicon.com/careers
+    domain: semiconductor
+
+  # --- Manufacturing / industrial / automotive ---
+  - name: Bosch
+    website: https://www.bosch.in
+    career_url: https://www.bosch.in/careers
+    domain: automotive
+  - name: Siemens
+    website: https://www.siemens.com
+    career_url: https://jobs.siemens.com
+    domain: manufacturing
+  - name: GE
+    website: https://www.ge.com
+    career_url: https://jobs.gecareers.com
+    domain: manufacturing
+  - name: Honeywell
+    website: https://www.honeywell.com
+    career_url: https://careers.honeywell.com
+    domain: manufacturing
+  - name: ABB
+    website: https://www.abb.com
+    career_url: https://careers.abb
+    domain: manufacturing
+  - name: Schneider Electric
+    website: https://www.se.com
+    career_url: https://www.se.com/ww/en/about-us/careers
+    domain: manufacturing
+  - name: Emerson
+    website: https://www.emerson.com
+    career_url: https://www.emerson.com/en-us/careers
+    domain: manufacturing
+  - name: Hitachi
+    website: https://www.hitachi.com
+    career_url: https://careers.hitachi.com
+    domain: manufacturing
+  - name: Toyota
+    website: https://www.toyota.com
+    career_url: https://www.toyota.com/usa/careers
+    domain: automotive
+  - name: Mercedes-Benz
+    website: https://www.mercedes-benz.co.in
+    career_url: https://www.mercedes-benz.co.in/passengercars/brand/career.html
+    domain: automotive
+  - name: BMW
+    website: https://www.bmw.in
+    career_url: https://www.bmw.in/en/footer/careers.html
+    domain: automotive
+  - name: Volvo
+    website: https://www.volvogroup.com
+    career_url: https://www.volvogroup.com/en/careers.html
+    domain: automotive
+  - name: Tesla
+    website: https://www.tesla.com
+    career_url: https://www.tesla.com/careers
+    domain: automotive
+  - name: Mahindra
+    website: https://www.mahindra.com
+    career_url: https://www.mahindra.com/careers
+    domain: automotive
+  - name: Tata Motors
+    website: https://www.tatamotors.com
+    career_url: https://www.tatamotors.com/careers
+    domain: automotive
+  - name: Caterpillar
+    website: https://www.caterpillar.com
+    career_url: https://www.caterpillar.com/en/careers.html
+    domain: manufacturing
+  - name: 3M
+    website: https://www.3m.com
+    career_url: https://www.3m.com/3M/en_US/careers-us
+    domain: manufacturing
+  - name: Philips
+    website: https://www.philips.co.in
+    career_url: https://www.careers.philips.com
+    domain: healthcare
+  - name: GE Healthcare
+    website: https://www.gehealthcare.com
+    career_url: https://jobs.gecareers.com/healthcare
+    domain: healthcare
+  - name: Siemens Healthineers
+    website: https://www.siemens-healthineers.com
+    career_url: https://www.siemens-healthineers.com/careers
+    domain: healthcare
+  - name: Medtronic
+    website: https://www.medtronic.com
+    career_url: https://www.medtronic.com/us-en/about/careers.html
+    domain: healthcare
+  - name: Thermo Fisher
+    website: https://www.thermofisher.com
+    career_url: https://jobs.thermofisher.com
+    domain: healthcare
+
+  # --- Aerospace / defense ---
+  - name: Airbus
+    website: https://www.airbus.com
+    career_url: https://www.airbus.com/en/careers
+    domain: aerospace
+  - name: Boeing
+    website: https://www.boeing.com
+    career_url: https://jobs.boeing.com
+    domain: aerospace
+  - name: Collins Aerospace
+    website: https://www.collinsaerospace.com
+    career_url: https://www.collinsaerospace.com/who-we-are/careers
+    domain: aerospace
+  - name: Honeywell Aerospace
+    website: https://aerospace.honeywell.com
+    career_url: https://careers.honeywell.com
+    domain: aerospace
+  - name: Safran
+    website: https://www.safran-group.com
+    career_url: https://www.safran-group.com/jobs
+    domain: aerospace
+  - name: Pratt & Whitney
+    website: https://www.prattwhitney.com
+    career_url: https://www.prattwhitney.com/en/careers
+    domain: aerospace
+  - name: Rolls-Royce
+    website: https://www.rolls-royce.com
+    career_url: https://careers.rolls-royce.com
+    domain: aerospace
+  - name: GE Aerospace
+    website: https://www.geaerospace.com
+    career_url: https://jobs.gecareers.com/aviation
+    domain: aerospace
+  - name: HAL
+    website: https://hal-india.co.in
+    career_url: https://hal-india.co.in/Career
+    domain: aerospace
+  - name: BEL
+    website: https://bel-india.in
+    career_url: https://bel-india.in/careers
+    domain: aerospace
+  - name: Tata Advanced Systems
+    website: https://www.tataadvancedsystems.com
+    career_url: https://www.tataadvancedsystems.com/careers
+    domain: aerospace
+  - name: Dynamatic Technologies
+    website: https://www.dynamatics.com
+    career_url: https://www.dynamatics.com/careers
+    domain: aerospace
+  - name: GKN Aerospace
+    website: https://www.gknaerospace.com
+    career_url: https://www.gknaerospace.com/en/careers
+    domain: aerospace
+  - name: Thales
+    website: https://www.thalesgroup.com
+    career_url: https://careers.thalesgroup.com
+    domain: aerospace
+  - name: Lockheed Martin
+    website: https://www.lockheedmartin.com
+    career_url: https://www.lockheedmartinjobs.com
+    domain: aerospace
+  - name: L&T Technology Services
+    website: https://www.ltts.com
+    career_url: https://www.ltts.com/careers
+    domain: engineering_services
+  - name: Cyient
+    website: https://www.cyient.com
+    career_url: https://www.cyient.com/careers
+    domain: engineering_services
+  - name: HCL Engineering and R&D
+    website: https://www.hcltech.com
+    career_url: https://www.hcltech.com/engineering-and-rd-services
+    domain: engineering_services

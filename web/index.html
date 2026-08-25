@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JD Scraper — Bangalore QA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="mark">JD</span>
+      <div>
+        <strong>Career pages</strong>
+        <span>Bengaluru QA / SDET</span>
+      </div>
+    </div>
+    <dl class="pulse" id="pulse"></dl>
+  </header>
+
+  <div class="shell">
+    <nav class="rail" aria-label="Views">
+      <button type="button" data-view="jobs" class="on">Jobs</button>
+      <button type="button" data-view="companies">Companies</button>
+      <button type="button" data-view="coverage">Coverage</button>
+      <button type="button" data-view="analysis">Analysis</button>
+    </nav>
+
+    <main>
+      <section id="view-jobs" class="view on">
+        <div class="toolbar">
+          <input id="job-q" type="search" placeholder="Search role, company, stack" autocomplete="off">
+          <select id="job-domain"></select>
+          <span class="count" id="job-count"></span>
+        </div>
+        <div class="split">
+          <ol id="job-list" class="list"></ol>
+          <article id="job-detail" class="detail empty">Select a job.</article>
+        </div>
+      </section>
+
+      <section id="view-companies" class="view">
+        <div class="toolbar">
+          <input id="co-q" type="search" placeholder="Search company" autocomplete="off">
+          <select id="co-domain"></select>
+          <select id="co-source">
+            <option value="">All sources</option>
+            <option value="seed">seed</option>
+            <option value="wikipedia">wikipedia</option>
+          </select>
+          <select id="co-ats"></select>
+          <span class="count" id="co-count"></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Domain</th>
+                <th>ATS</th>
+                <th>Status</th>
+                <th>Career</th>
+              </tr>
+            </thead>
+            <tbody id="co-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="view-coverage" class="view">
+        <div id="coverage-metrics" class="metrics"></div>
+        <div class="grid-2">
+          <section class="panel">
+            <h2>Domains</h2>
+            <div id="cov-domains" class="bars"></div>
+          </section>
+          <section class="panel">
+            <h2>Crawl status</h2>
+            <div id="cov-status" class="bars"></div>
+          </section>
+          <section class="panel">
+            <h2>Sources</h2>
+            <div id="cov-sources" class="bars"></div>
+          </section>
+          <section class="panel">
+            <h2>ATS</h2>
+            <div id="cov-ats" class="bars"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="view-analysis" class="view">
+        <p class="lede">Analyses read the same SQLite file. Add a function in <code>jdscraper.analysis</code> and it appears here.</p>
+        <div class="split analysis">
+          <ol id="analysis-list" class="list"></ol>
+          <article id="analysis-detail" class="detail">
+            <h2 id="an-title">Pick an analysis</h2>
+            <p id="an-summary" class="muted"></p>
+            <div id="an-bars" class="bars"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

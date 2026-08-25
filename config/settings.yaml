@@ -1,0 +1,30 @@
+db_path: data/jdscraper.sqlite
+seed_path: config/companies.seed.yaml
+city_required: true
+recrawl_days: 7
+user_agent: "JDScraper/0.1 (+personal job search; govind_divekar@yahoo.com)"
+locations:
+  - Bengaluru
+  - Bangalore
+  - Banagalore
+  - Banglore
+  - BLR
+work_modes:
+  - office
+  - hybrid
+exclude_title_terms:
+  - intern
+  - internship
+  - fresher
+  - graduate
+  - campus
+  - apprentice
+  - trainee
+polite:
+  min_delay_seconds: 15
+  max_delay_seconds: 45
+  same_host_min_seconds: 60
+  honor_robots: true
+  max_pages_per_company: 8
+  timeout_seconds: 25
+  stop_on_status: [401, 403, 429, 503]
