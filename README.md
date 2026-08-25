@@ -104,6 +104,24 @@ uv run jdscraper crawl --limit 3 --min-delay 4 --max-delay 8 --host-delay 10
 
 Do not drop these to zero against HTML career pages. ATS JSON APIs can use a few seconds.
 
+## Cron
+
+Three script-only jobs (no LLM) run on this machine:
+
+| Job | IST | What |
+|---|---|---|
+| `jdscraper-resolve` | 10:00 | Seed upsert + resolve 8 companies |
+| `jdscraper-crawl` | 19:00 | Crawl 5 due companies |
+| `jdscraper-inspect` | 19:30 | Report new QA jobs / coverage; silent if unchanged |
+
+They are staggered on purpose. There is no combined `run` cron.
+
+```bash
+hermes cron list
+hermes cron run d5e5680b691a    # fire resolve now
+hermes cron pause ecc36a382686
+```
+
 ## Viewer
 
 ```bash
