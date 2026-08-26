@@ -115,10 +115,7 @@ Three script-only jobs (no LLM) run on this machine:
 | `jdscraper-inspect` | 19:30 | Report new QA jobs / coverage; silent if unchanged |
 
 They are staggered on purpose. There is no combined `run` cron.
-
-See [DEPLOY-DIETPI.md](DEPLOY-DIETPI.md) to run this on a Raspberry Pi
-with **system cron** (no Hermes). On this laptop the same three jobs
-are Hermes script-only crons.
+DietPi uses the same wrappers via system crontab (`scripts/cron/run.sh`).
 
 ```bash
 hermes cron list

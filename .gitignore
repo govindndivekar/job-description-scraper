@@ -15,3 +15,4 @@ output/
 .python-version
 temp/
 uv.lock
+DEPLOY-DIETPI.md
