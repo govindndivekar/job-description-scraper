@@ -16,3 +16,5 @@ output/
 temp/
 uv.lock
 DEPLOY-DIETPI.md
+DIETPI-CRON.md
+DIETPI-VPN.md
