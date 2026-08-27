@@ -15,9 +15,5 @@ output/
 .python-version
 temp/
 uv.lock
-DEPLOY-DIETPI.md
-DIETPI-CRON.md
-DIETPI-VPN.md
 data/
-active
-activer
+doc/

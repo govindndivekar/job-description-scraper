@@ -116,6 +116,7 @@ Three script-only jobs (no LLM) run on this machine:
 
 They are staggered on purpose. There is no combined `run` cron.
 DietPi uses the same wrappers via system crontab (`scripts/cron/run.sh`).
+Local DietPi / VPN / crawler notes live in `doc/` (gitignored).
 
 ```bash
 hermes cron list
