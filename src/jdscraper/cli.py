@@ -30,6 +30,16 @@ def build_parser() -> argparse.ArgumentParser:
     resolve = sub.add_parser("resolve", help="Find career URLs / ATS type for companies missing them")
     resolve.add_argument("--limit", type=int, default=10)
     resolve.add_argument("--company", help="Resolve one company by name")
+    resolve.add_argument(
+        "--recheck",
+        action="store_true",
+        help="Revisit companies whose career URL is generic or guessed",
+    )
+    resolve.add_argument(
+        "--search",
+        action="store_true",
+        help="Use Google Programmable Search (env JDSCRAPER_GOOGLE_API_KEY + JDSCRAPER_GOOGLE_CSE_ID)",
+    )
     _add_delay_flags(resolve)
 
     crawl = sub.add_parser("crawl", help="Fetch public jobs for a small shuffled company batch")
@@ -130,12 +140,30 @@ def cmd_resolve(args) -> int:
         if not companies:
             print(f"unknown company: {args.company}", file=sys.stderr)
             return 1
+    elif getattr(args, "recheck", False):
+        companies = [
+            company
+            for company in store.list_companies()
+            if (company.ats_kind or "generic") == "generic"
+        ][: args.limit]
     else:
         companies = store.unresolved_companies()[: args.limit]
+    search = None
+    if getattr(args, "search", False):
+        from jdscraper.careers.search import hits_via_google_cse, load_search_secrets
+
+        key, cx = load_search_secrets()
+        if not key or not cx:
+            print(
+                "search skipped: set JDSCRAPER_GOOGLE_API_KEY and JDSCRAPER_GOOGLE_CSE_ID",
+                file=sys.stderr,
+            )
+        else:
+            search = lambda company: hits_via_google_cse(company, fetcher.get)
     random.shuffle(companies)
     resolved = 0
     for company in companies:
-        updated = resolve_company(company, fetcher)
+        updated = resolve_company(company, fetcher, search=search)
         store.upsert_company(updated)
         print(f"{updated.name}: ats={updated.ats_kind or '-'} {updated.career_url or '-'}")
         if updated.career_url:

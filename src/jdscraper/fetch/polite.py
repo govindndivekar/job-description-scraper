@@ -12,6 +12,7 @@ PUBLIC_API_PREFIXES = (
     "https://api.lever.co/",
     "https://api.ashbyhq.com/",
     "https://api.smartrecruiters.com/",
+    "https://www.googleapis.com/customsearch/",
 )
 
 

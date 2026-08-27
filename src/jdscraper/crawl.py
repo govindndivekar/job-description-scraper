@@ -8,6 +8,7 @@ from jdscraper.ats.ashby import parse_ashby_jobs
 from jdscraper.ats.greenhouse import parse_greenhouse_jobs
 from jdscraper.ats.lever import parse_lever_jobs
 from jdscraper.ats.workday import parse_workday_jobs
+from jdscraper.careers.pages import listings_links_from_html
 from jdscraper.extract.qa_filter import classify_role
 from jdscraper.fetch.polite import FetchResult, PoliteFetcher
 from jdscraper.models import Company, RawJob
@@ -135,5 +136,17 @@ def fetch_company_jobs(company: Company, fetcher: PoliteFetcher) -> tuple[list[R
             return [], f"blocked:{result.status}"
         if result.status >= 400 or not result.text:
             return [], f"http:{result.status}"
-        return parse_generic_listing(result.text, company, result.url or company.career_url), "ok"
+        page_url = result.url or company.career_url
+        jobs = parse_generic_listing(result.text, company, page_url)
+        if jobs:
+            return jobs, "ok"
+
+        for link in listings_links_from_html(result.text, page_url)[:3]:
+            nested = fetcher.get(link)
+            if nested.blocked or nested.status >= 400 or not nested.text:
+                continue
+            hit_jobs = parse_generic_listing(nested.text, company, nested.url or link)
+            if hit_jobs:
+                return hit_jobs, "ok"
+        return jobs, "ok"
     return [], "no_career_url"

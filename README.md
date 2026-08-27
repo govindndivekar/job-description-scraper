@@ -48,7 +48,8 @@ uv run jdscraper discover --wikipedia --min-delay 1 --max-delay 2 --host-delay 1
 
 # 2. Find career / ATS URLs for companies that still lack them
 uv run jdscraper resolve --limit 10
-uv run jdscraper resolve --company Okta
+uv run jdscraper resolve --recheck --limit 8
+uv run jdscraper resolve --company Okta --search
 
 # 3. Fetch public jobs for a small shuffled batch (default 5)
 uv run jdscraper crawl --limit 5
@@ -79,7 +80,7 @@ uv run pytest tests/ -q
 | Command | Default | What it does |
 |---|---|---|
 | `discover` | seed YAML only | Upsert companies from `config/companies.seed.yaml`. `--wikipedia` also pulls Bengaluru Wikipedia/Wikidata lists. `--seed PATH` overrides the seed file. |
-| `resolve` | `--limit 10` | Visit homepage / careers links and detect ATS (Greenhouse, Lever, Ashby, Workday, …). `--company NAME` does one firm. |
+| `resolve` | `--limit 10` | Visit homepage / careers links, follow “current openings” subpages, detect ATS. `--recheck` revisits guessed `/careers` URLs. `--search` uses Google Programmable Search when `JDSCRAPER_GOOGLE_API_KEY` and `JDSCRAPER_GOOGLE_CSE_ID` are set. `--company NAME` does one firm. |
 | `crawl` | `--limit 5` | Fetch public jobs, keep Bangalore QA/SDET locally, upsert SQLite. `--company NAME` recrawls one firm even if recently done. |
 | `companies` | `--limit 50` | List the employer catalog. `--source seed\|wikipedia`, `--json`. |
 | `jobs` | all rows | List kept QA jobs. `--company NAME`, `--domain saas`, `--json`. |
